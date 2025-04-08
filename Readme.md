@@ -645,21 +645,3 @@ CREATE INDEX idx_order_customer ON `order`(customer_id);
     DELIMITER ;
 
 ```
-
-# 7. Desafio
-
-##  Como você implementaria um sistema de backup automatizado para garantir a segurança dos dados?
-
-Por meio de scripts programados em conjunto com ferramentas especializadas, como rsync, cron jobs, Docker volumes, ou soluções empresariais como Veeam e AWS Backup.
-
-## Qual estratégia seria adotada?
-
-Para isso, seria utilizado um esquema de backup incremental e diferencial, combinado com backups completos periódicos. O backup completo seria realizado semanalmente para armazenar uma cópia íntegra de todos os dados, enquanto os backups incrementais seriam feitos diariamente para registrar apenas as alterações desde o último backup.
-
-## Onde seria armazenado ?
-
-seguir a regra 3-2-1, que consiste em manter três cópias dos dados: duas em mídias diferentes (como servidores locais e dispositivos externos) e uma cópia offsite, armazenada em um ambiente externo seguro, como um serviço de nuvem.
-
-## Como validaria ?
-
-A validação do backup seria realizada por meio de testes periódicos de recuperação e verificação da integridade dos arquivos armazenados. Inicialmente, seriam aplicadas verificações de checksumspara garantir que os dados não foram corrompidos durante o processo de cópia ou transferência.
