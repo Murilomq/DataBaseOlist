@@ -613,8 +613,7 @@ CREATE INDEX idx_order_customer ON `order`(customer_id);
 # 6. Auditoria no BD
 
 ###
-    Criaria a tabela auditoria no banco, onde seria registrado o historico de operações como inserts, deletes e etc. 
-    Para obter essas informações criaria triggers nas tabelas que iriam registrar as informações em auditoria. 
+   Exemplo
 ```sql
 
     # Exemplo da tabela auditoria
